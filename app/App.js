@@ -107,13 +107,15 @@
 import React from "react";
 import Component from "./Component.js";
 import Workofchip from "./Workofchip.js";
+import Container from "./Containers.js";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 const App = () => {
   return (
     <>
       <SafeAreaProvider>
         {/* <Component /> */}
-        <Workofchip />
+        {/* <Workofchip /> */}
+        <Container />
       </SafeAreaProvider>
     </>
   );

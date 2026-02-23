@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StatusBar, Text } from "react-native";
+import { View, StatusBar, Text,StyleSheet } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, Dialog, Card } from "react-native-paper";
 

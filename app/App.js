@@ -104,19 +104,36 @@
 //     color: "gray"
 //   }
 // });
-import React from "react";
+import React, { use } from "react";
 import Component from "./Component.js";
 import Workofchip from "./Workofchip.js";
 import Container from "./Containers.js";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { View } from "react-native";
+import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./Home.jsx";
+import { createStackNavigator } from "@react-navigation/stack";
+import Contact from "./Contact.jsx";
+
+const Stack = createNativeStackNavigator();
 const App = () => {
+  // const insets = useSafeAreaInsets();
   return (
     <>
-      <SafeAreaProvider>
-        {/* <Component /> */}
-        {/* <Workofchip /> */}
-        <Container />
-      </SafeAreaProvider>
+      {/* <SafeAreaProvider>
+        <View style={{ paddingTop: insets.top }}></View> */}
+      {/* <Component /> */}
+      {/* <Workofchip /> */}
+      {/* <Container /> */}
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Contact" component={Contact} />
+        </Stack.Navigator>
+      </NavigationContainer>
+      {/* 
+      </SafeAreaProvider> */}
     </>
   );
 }

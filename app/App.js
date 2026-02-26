@@ -115,23 +115,27 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Home.jsx";
 import { createStackNavigator } from "@react-navigation/stack";
 import Contact from "./Contact.jsx";
+import Topbar_Navigation from "./Topbar_Navigation.jsx";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
   // const insets = useSafeAreaInsets();
   return (
     <>
+      <SafeAreaProvider>
+        <Topbar_Navigation />
+      </SafeAreaProvider>
       {/* <SafeAreaProvider>
         <View style={{ paddingTop: insets.top }}></View> */}
       {/* <Component /> */}
       {/* <Workofchip /> */}
       {/* <Container /> */}
-      <NavigationContainer>
+      {/* <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Contact" component={Contact} />
         </Stack.Navigator>
-      </NavigationContainer>
+      </NavigationContainer> */}
       {/* 
       </SafeAreaProvider> */}
     </>

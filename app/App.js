@@ -116,6 +116,7 @@ import Home from "./Home.jsx";
 import { createStackNavigator } from "@react-navigation/stack";
 import Contact from "./Contact.jsx";
 import Topbar_Navigation from "./Topbar_Navigation.jsx";
+import Drawer_Navigation from "./Drawer_Navigation.jsx";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -123,7 +124,8 @@ const App = () => {
   return (
     <>
       <SafeAreaProvider>
-        <Topbar_Navigation />
+        {/* <Topbar_Navigation /> */}
+        <Drawer_Navigation />
       </SafeAreaProvider>
       {/* <SafeAreaProvider>
         <View style={{ paddingTop: insets.top }}></View> */}

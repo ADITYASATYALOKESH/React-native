@@ -3,7 +3,7 @@ import { View, Image } from "react-native";
 import { Text, Button } from "react-native-paper";
 import * as ImagePicker from "expo-image-picker";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
+import * as sharing from "expo-sharing";
 const Imagepicker = () => {
     const insets = useSafeAreaInsets();
     const [image, setImage] = useState();
@@ -27,6 +27,13 @@ const Imagepicker = () => {
         }
     };
 
+    const share = async () => {
+        const result = await sharing.isAvailableAsync();
+        if (!result) {
+            alert("Allow Permissions for share")
+        }
+        await sharing.shareAsync(image);
+    }
     return (
         <>
             <View style={{ paddingTop: insets.top }}>
@@ -43,7 +50,7 @@ const Imagepicker = () => {
                     : <Text>No Image Selected</Text>}
             </View>
 
-            <Button mode="outlined">
+            <Button mode="outlined" onPress={share}>
                 Share Images
             </Button>
         </>

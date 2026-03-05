@@ -117,7 +117,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Contact from "./Contact.jsx";
 import Topbar_Navigation from "./Topbar_Navigation.jsx";
 import Drawer_Navigation from "./Drawer_Navigation.jsx";
-
+import Imagepicker from "./Imagepicker.js";
 const Stack = createNativeStackNavigator();
 const App = () => {
   // const insets = useSafeAreaInsets();
@@ -125,7 +125,8 @@ const App = () => {
     <>
       <SafeAreaProvider>
         {/* <Topbar_Navigation /> */}
-        <Drawer_Navigation />
+        {/* <Drawer_Navigation /> */}
+        <Imagepicker />
       </SafeAreaProvider>
       {/* <SafeAreaProvider>
         <View style={{ paddingTop: insets.top }}></View> */}

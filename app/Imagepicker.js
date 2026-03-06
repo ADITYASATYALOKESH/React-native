@@ -19,6 +19,7 @@ const Imagepicker = () => {
         const result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
             allowsEditing: true,
+            allowsMultipleSelection: true,
             quality: 1,
         });
 
